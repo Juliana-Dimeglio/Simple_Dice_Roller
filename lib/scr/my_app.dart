@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bloc/dice_bloc.dart';
 import 'screen_dice_roller.dart';
 
 class MyApp extends StatefulWidget {
@@ -17,7 +18,9 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ScreenDiceRoller(),
+      home: ScreenDiceRoller(
+        bloc: DiceBloc(),
+      ),
     );
   }
 }
